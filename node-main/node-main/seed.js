@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('./config');
 const Invoice = require('./models/invoice.model');
-const { mockInvoices } = require('./helpers/mock-data'); // Переконайтеся, що шлях правильний
+const { mockInvoices } = require('./helpers/mock-data'); 
 
 async function seedDatabase() {
     console.log('--- Початок завантаження тестових даних (Seeding) ---');
@@ -32,4 +32,5 @@ async function seedDatabase() {
 seedDatabase().catch(err => {
     console.error('Критична помилка виконання скрипту: ', err.message);
     process.exit(1);
+
 });
