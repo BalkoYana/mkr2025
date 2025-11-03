@@ -22,7 +22,7 @@ async function find({ searchString = '', page = 1, perPage = 20 }) {
     if (searchString) {
         
         filter.$or = [
-            { invoiceNumber: { $regex: searchString, $options: 'i' } }, // Якщо у вас є поле 'invoiceNumber'
+            { invoiceNumber: { $regex: searchString, $options: 'i' } }, 
             { client: { $regex: searchString, $options: 'i' } }
         ];
     }
@@ -87,4 +87,5 @@ module.exports = {
     findByIdAndUpdate,
     findByIdAndDelete,
     findOne
+
 };
